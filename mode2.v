@@ -8,7 +8,7 @@ module mode2(input clk,
  reg [15:0] count=1;
 always @(posedge clk) begin
  
-  if (count <= (switch_clk_cycles)+1) begin
+  if (count <= (switch_clk_cycles)) begin
  out_2<=DS1;
  count<=count+1;
  end
